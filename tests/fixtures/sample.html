@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sample Page - Token Diet MCP</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    .header { background: #333; color: white; padding: 20px; }
+    .nav { display: flex; gap: 10px; }
+    .nav a { color: white; text-decoration: none; }
+    .content { padding: 20px; max-width: 800px; margin: 0 auto; }
+    .sidebar { float: right; width: 200px; padding: 10px; background: #f0f0f0; }
+    .footer { background: #333; color: white; padding: 20px; text-align: center; }
+    .ad { border: 1px solid #ccc; padding: 10px; text-align: center; }
+  </style>
+  <script>
+    // Analytics tracking
+    (function() {
+      var ga = document.createElement('script');
+      ga.type = 'text/javascript';
+      ga.async = true;
+      ga.src = 'https://www.google-analytics.com/analytics.js';
+      document.getElementsByTagName('head')[0].appendChild(ga);
+    })();
+    
+    function trackClick(element) {
+      console.log('Clicked:', element.id);
+    }
+  </script>
+</head>
+<body>
+  <header class="header">
+    <h1>My Website</h1>
+    <nav class="nav" role="navigation">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/blog">Blog</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="sidebar">
+    <h3>Popular Posts</h3>
+    <ul>
+      <li><a href="/post-1">Understanding AI</a></li>
+      <li><a href="/post-2">Token Optimization</a></li>
+      <li><a href="/post-3">MCP Protocol</a></li>
+    </ul>
+    <div class="ad">
+      <p>Advertisement</p>
+      <img src="ad-banner.jpg" alt="Buy now!" />
+    </div>
+  </div>
+
+  <main class="content">
+    <article>
+      <h1>Understanding Token Optimization for AI</h1>
+      <p>Token optimization is a crucial technique for reducing costs when working with Large Language Models (LLMs). By carefully managing the content sent to AI models, developers can achieve significant cost savings without compromising output quality.</p>
+
+      <h2>Why Token Optimization Matters</h2>
+      <p>Every interaction with an AI model consumes tokens, which directly translates to cost. When processing large codebases, documentation, or web content, the token count can quickly escalate.</p>
+
+      <h3>Key Strategies</h3>
+      <ul>
+        <li><strong>HTML to Markdown conversion</strong> — Reduces tokens by 60-90% by stripping DOM noise</li>
+        <li><strong>Code compression</strong> — Removes comments, blank lines, and redundant whitespace</li>
+        <li><strong>JSON minification</strong> — Eliminates formatting whitespace</li>
+        <li><strong>Smart context selection</strong> — Only sends relevant portions of files</li>
+      </ul>
+
+      <h2>Implementation</h2>
+      <p>The Model Context Protocol (MCP) provides a standardized way to implement these optimizations. By creating an MCP server, these tools become available to any compatible AI assistant.</p>
+
+      <pre><code>
+// Example: Token savings calculation
+const original = 5000; // tokens
+const optimized = 1500; // tokens
+const savings = ((original - optimized) / original) * 100;
+console.log(`Saved ${savings}% of tokens`);
+      </code></pre>
+
+      <h2>Results</h2>
+      <p>In our testing, we observed the following token savings:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Content Type</th>
+            <th>Average Savings</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>HTML documents</td>
+            <td>75%</td>
+          </tr>
+          <tr>
+            <td>Source code</td>
+            <td>35%</td>
+          </tr>
+          <tr>
+            <td>JSON data</td>
+            <td>30%</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 My Website. All rights reserved.</p>
+    <p>Terms of Service | Privacy Policy | Cookie Policy</p>
+  </footer>
+
+  <div class="cookie-banner" id="cookie-consent">
+    <p>This website uses cookies. <button onclick="acceptCookies()">Accept</button></p>
+  </div>
+
+  <script>
+    // More JavaScript noise
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('Page loaded');
+      var elements = document.querySelectorAll('.nav a');
+      elements.forEach(function(el) {
+        el.addEventListener('click', function() {
+          trackClick(el);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
